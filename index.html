@@ -2550,6 +2550,7 @@
                   name="from_name"
                   class="form-control-custom"
                   required
+                  maxlength="120"
                   placeholder="Votre nom et prénom"
                   autocomplete="name"
                 />
@@ -2569,6 +2570,7 @@
                   name="reply_to"
                   class="form-control-custom"
                   required
+                  maxlength="254"
                   placeholder="votre@email.com"
                   autocomplete="email"
                 />
@@ -2588,6 +2590,7 @@
                   name="subject"
                   class="form-control-custom"
                   required
+                  maxlength="160"
                   placeholder="Objet de votre message"
                   autocomplete="off"
                 />
@@ -2607,6 +2610,7 @@
                   class="form-control-custom"
                   rows="5"
                   required
+                  maxlength="5000"
                   placeholder="Décrivez votre projet, votre besoin..."
                 ></textarea>
                 <div class="invalid-feedback-custom" role="alert">
@@ -2680,9 +2684,8 @@
                 role="alert"
               >
                 <i class="bi bi-check-circle-fill me-2"></i>
-                Votre client mail s'est ouvert avec le message pré-rempli.
-                Cliquez sur "Envoyer" dans votre messagerie pour finaliser
-                l'envoi.
+                Votre message a bien été envoyé. Je vous répondrai dès que
+                possible.
               </div>
               <div
                 id="formError"

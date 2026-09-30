@@ -3,6 +3,9 @@
   "main": "src/index.mjs",
   "compatibility_date": "2026-09-30",
   "vars": {
-    "ALLOWED_ORIGIN": "https://toufik12197.github.io"
+    "ALLOWED_ORIGIN": "https://toufik12197.github.io",
+    "EMAILJS_SERVICE_ID": "service_ri40anh",
+    "EMAILJS_TEMPLATE_ID": "template_xdo3kt9",
+    "EMAILJS_PUBLIC_KEY": "NKoCyucIsG9E6eyfv"
   }
 }

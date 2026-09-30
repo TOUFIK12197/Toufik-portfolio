@@ -72,12 +72,14 @@ La clé publique du widget peut être visible dans le navigateur. Le secret Goog
    ```
 
    À l'invite, collez la clé secrète Google. La commande de déploiement affiche l'adresse `workers.dev` du Worker.
-4. Dans `js/config.js`, remplacez `REMPLACER_PAR_CLE_PUBLIQUE_GOOGLE` par la clé du site, et `REMPLACER_PAR_URL_WORKER.workers.dev` par l'adresse du Worker suivie de `/verify`.
-5. Publiez le site sur GitHub Pages. Le Worker n'accepte que les requêtes provenant de l'origine indiquée dans `ALLOWED_ORIGIN` et vérifie aussi le nom d'hôte renvoyé par Google.
+4. Dans EmailJS, créez un service lié à votre compte Gmail et un modèle. Configurez **To Email** avec l'adresse qui doit recevoir les messages, **Reply To** avec `{{reply_to}}`, puis utilisez `{{from_name}}`, `{{subject}}` et `{{message}}` dans le sujet et le contenu du modèle.
+5. Dans `cloudflare-worker/wrangler.jsonc`, configurez `EMAILJS_SERVICE_ID`, `EMAILJS_TEMPLATE_ID` et `EMAILJS_PUBLIC_KEY` avec les valeurs affichées dans EmailJS. Ces paramètres d'identification EmailJS sont publics ; ne mettez jamais une clé privée EmailJS dans ce fichier ni dans le site. Le secret `RECAPTCHA_SECRET` doit rester un secret Cloudflare.
+6. Dans `js/config.js`, renseignez votre clé publique reCAPTCHA et remplacez l'URL du Worker par son adresse suivie de `/send`.
+7. Redéployez le Worker après toute modification de sa configuration, puis publiez le site sur GitHub Pages. Le Worker n'accepte que les requêtes provenant de l'origine indiquée dans `ALLOWED_ORIGIN` et vérifie aussi le nom d'hôte renvoyé par Google.
 
 Pour tester depuis `http://localhost:8000`, ajoutez `localhost` aux domaines autorisés de la clé Google et remplacez temporairement `ALLOWED_ORIGIN` par `http://localhost:8000`, puis redéployez le Worker. Restaurez l'origine de production avant la mise en ligne.
 
-Le formulaire continue à préparer un message avec `mailto` : l'application de messagerie du visiteur doit être configurée et l'envoi final se fait dans cette application. Le Worker valide bien le jeton reCAPTCHA côté serveur, mais ne reçoit ni ne stocke le message.
+Le formulaire vérifie le reCAPTCHA dans le Worker avant de transmettre le message au modèle EmailJS. L'envoi est effectué sans ouvrir l'application de messagerie du visiteur. Le Worker ne stocke pas le message.
 
 ## Mise en ligne avec GitHub Pages
 
@@ -122,6 +124,6 @@ Les préfixes (`feat`, `fix`, `docs`, `style`) aident à repérer rapidement la 
 ## Avant chaque publication
 
 - Vérifier le rendu sur ordinateur et mobile.
-- Tester les liens, le téléchargement du CV et le formulaire de contact. Le reCAPTCHA doit être configuré et le Worker déployé ; le formulaire prépare ensuite un message avec `mailto` et nécessite une application de messagerie configurée chez le visiteur.
+- Tester les liens, le téléchargement du CV et le formulaire de contact. Le reCAPTCHA, les variables EmailJS du Worker et le Worker déployé sont nécessaires pour l'envoi.
 - Vérifier que les informations personnelles et les documents placés dans `assets/` peuvent être rendus publics.
 - Mettre à jour `CHANGELOG.md`, puis vérifier les fichiers concernés avec `git status` avant de créer le commit.

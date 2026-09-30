@@ -20,7 +20,7 @@ export default {
       return new Response('Forbidden', { status: 403 });
     }
 
-    if (new URL(request.url).pathname !== '/verify') {
+    if (new URL(request.url).pathname !== '/send') {
       return jsonResponse({ success: false }, 404, allowedOrigin);
     }
 
@@ -41,26 +41,59 @@ export default {
       return jsonResponse({ success: false }, 405, allowedOrigin);
     }
 
-    if (!env.RECAPTCHA_SECRET) {
-      console.error('The RECAPTCHA_SECRET Worker secret is not configured.');
+    if (
+      !env.RECAPTCHA_SECRET ||
+      !env.EMAILJS_SERVICE_ID ||
+      !env.EMAILJS_TEMPLATE_ID ||
+      !env.EMAILJS_PUBLIC_KEY
+    ) {
+      console.error('The contact form Worker is missing required configuration.');
       return jsonResponse({ success: false }, 500, allowedOrigin);
     }
 
-    let token;
+    let body;
     try {
-      const body = await request.json();
-      token = body?.token;
+      body = await request.json();
     } catch {
       return jsonResponse({ success: false }, 400, allowedOrigin);
     }
 
-    if (typeof token !== 'string' || token.length === 0 || token.length > 4096) {
+    const fields = {
+      name: typeof body?.name === 'string' ? body.name.trim() : '',
+      email: typeof body?.email === 'string' ? body.email.trim() : '',
+      subject: typeof body?.subject === 'string' ? body.subject.trim() : '',
+      message: typeof body?.message === 'string' ? body.message.trim() : '',
+      token: body?.token,
+      website: body?.website,
+    };
+
+    if (typeof fields.website === 'string' && fields.website.length > 0) {
+      return jsonResponse({ success: true }, 200, allowedOrigin);
+    }
+
+    if (
+      typeof fields.name !== 'string' ||
+      fields.name.length === 0 ||
+      fields.name.length > 120 ||
+      typeof fields.email !== 'string' ||
+      fields.email.length > 254 ||
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email) ||
+      typeof fields.subject !== 'string' ||
+      fields.subject.length === 0 ||
+      fields.subject.length > 160 ||
+      typeof fields.message !== 'string' ||
+      fields.message.length === 0 ||
+      fields.message.length > 5000 ||
+      typeof fields.token !== 'string' ||
+      fields.token.length === 0 ||
+      fields.token.length > 4096
+    ) {
       return jsonResponse({ success: false }, 400, allowedOrigin);
     }
 
     const verificationBody = new URLSearchParams({
       secret: env.RECAPTCHA_SECRET,
-      response: token,
+      response: fields.token,
     });
     let verificationResponse;
     try {
@@ -98,7 +131,41 @@ export default {
       verification.success !== true ||
       verification.hostname !== allowedHostname
     ) {
-      return jsonResponse({ success: false }, 200, allowedOrigin);
+      return jsonResponse(
+        { success: false, error: 'captcha_invalid' },
+        400,
+        allowedOrigin
+      );
+    }
+
+    let emailResponse;
+    try {
+      emailResponse = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Origin': allowedOrigin,
+        },
+        body: JSON.stringify({
+          service_id: env.EMAILJS_SERVICE_ID,
+          template_id: env.EMAILJS_TEMPLATE_ID,
+          user_id: env.EMAILJS_PUBLIC_KEY,
+          template_params: {
+            from_name: fields.name,
+            reply_to: fields.email,
+            subject: fields.subject,
+            message: fields.message,
+          },
+        }),
+      });
+    } catch (error) {
+      console.error('EmailJS request failed.', error);
+      return jsonResponse({ success: false }, 502, allowedOrigin);
+    }
+
+    if (!emailResponse.ok) {
+      console.error(`EmailJS returned ${emailResponse.status}.`);
+      return jsonResponse({ success: false }, 502, allowedOrigin);
     }
 
     return jsonResponse({ success: true }, 200, allowedOrigin);

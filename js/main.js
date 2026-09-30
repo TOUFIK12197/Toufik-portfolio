@@ -117,7 +117,7 @@ function hideItem(item) {
   item._hideTimer = setTimeout(() => item.classList.add('hidden'), 300);
 }
 
-/* 5. FORMULAIRE CONTACT — envoi par mailto */
+/* 5. FORMULAIRE CONTACT — envoi via le Worker Cloudflare */
 function initContactForm() {
   const form = document.getElementById('contactForm');
 
@@ -156,13 +156,10 @@ function initContactForm() {
     }
 
     const config = window.CONTACT_CONFIG;
-    if (
-      !config?.verificationEndpoint ||
-      config.verificationEndpoint.includes('REMPLACER')
-    ) {
+    if (!config?.contactEndpoint || config.contactEndpoint.includes('REMPLACER')) {
       showContactError(
-        'La protection anti-spam n’est pas encore configurée. ' +
-        'Veuillez réessayer plus tard ou nous écrire directement par email.'
+        'Le formulaire n’est pas encore configuré. ' +
+        'Veuillez nous écrire directement par email.'
       );
       return;
     }
@@ -172,109 +169,72 @@ function initContactForm() {
     const originalButtonText = buttonText?.innerHTML;
     if (submitButton) submitButton.disabled = true;
     form.setAttribute('aria-busy', 'true');
-    if (buttonText) buttonText.textContent = 'Vérification en cours…';
+    if (buttonText) buttonText.textContent = 'Envoi en cours…';
 
     try {
-      const verification = await fetch(config.verificationEndpoint, {
+      const response = await fetch(config.contactEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ token: captchaToken }),
+        body: JSON.stringify({
+          token: captchaToken,
+          name: document.getElementById('contactName').value.trim(),
+          email: document.getElementById('contactEmail').value.trim(),
+          subject: document.getElementById('contactSubject').value.trim(),
+          message: document.getElementById('contactMessage').value.trim(),
+          website: websiteField?.value.trim() || '',
+        }),
       });
 
-      if (!verification.ok) {
-        throw new Error(`reCAPTCHA Worker returned ${verification.status}`);
+      const result = await response.json();
+      if (!response.ok || result.success !== true) {
+        if (result.error === 'captcha_invalid') {
+          captchaError?.classList.remove('d-none');
+          return;
+        }
+        throw new Error(
+          `Contact Worker returned ${response.status}: ${result.error || 'unknown error'}`
+        );
       }
 
-      const result = await verification.json();
-      if (result.success !== true) {
-        captchaError?.classList.remove('d-none');
-        resetRecaptcha();
-        return;
-      }
+      showFeedback('formSuccess');
+      form.reset();
+      clearValidation(form);
     } catch (error) {
-      console.error('Impossible de vérifier le reCAPTCHA.', error);
+      console.error('Impossible d’envoyer le message de contact.', error);
       showContactError(
-        'La vérification de sécurité est momentanément indisponible. ' +
-        'Réessayez dans quelques instants ou contactez-nous directement par email.'
+        'Le message n’a pas pu être envoyé. Réessayez dans quelques instants ' +
+        'ou contactez-nous directement par email.'
       );
-      resetRecaptcha();
-      return;
     } finally {
       if (submitButton) submitButton.disabled = false;
       form.removeAttribute('aria-busy');
       if (buttonText && originalButtonText) {
         buttonText.innerHTML = originalButtonText;
       }
+      resetRecaptcha();
     }
-
-    /* ─────────────────────────────────────
-       Ton code mailto existant continue ici
-       ───────────────────────────────────── */
-
-    const name =
-      document.getElementById('contactName').value.trim();
-
-    const email =
-      document.getElementById('contactEmail').value.trim();
-
-    const subject =
-      document.getElementById('contactSubject').value.trim();
-
-    const message =
-      document.getElementById('contactMessage').value.trim();
-
-    const destinataire =
-      'aitamranetoufik97@gmail.com';
-
-    const sujetFinal = subject
-      ? `[Portfolio] ${subject}`
-      : `[Portfolio] Message de ${name}`;
-
-    const corpsFinal =
-      `Nom : ${name}\n` +
-      `Email : ${email}\n\n` +
-      `Message :\n${message}`;
-
-    const mailtoLink =
-      `mailto:${destinataire}` +
-      `?subject=${encodeURIComponent(sujetFinal)}` +
-      `&body=${encodeURIComponent(corpsFinal)}`;
-
-    window.location.href = mailtoLink;
-
-    showFeedback('formSuccess');
-
-    form.reset();
-
-    clearValidation(form);
-
-    resetRecaptcha();
   });
 
   form.querySelectorAll('[required]').forEach((field) => {
-
-    field.addEventListener(
-      'blur',
-      () => validateField(field)
-    );
+    field.addEventListener('blur', () => validateField(field));
 
     field.addEventListener('input', () => {
       if (field.classList.contains('is-invalid')) {
         validateField(field);
       }
-
-      function showContactError(message) {
-        const error = document.getElementById('formError');
-        if (!error) return;
-
-        const icon = document.createElement('i');
-        icon.className = 'bi bi-exclamation-triangle-fill me-2';
-        icon.setAttribute('aria-hidden', 'true');
-        error.replaceChildren(icon, document.createTextNode(message));
-        error.classList.remove('d-none');
-      }
     });
   });
+}
+
+function showContactError(message) {
+  const error = document.getElementById('formError');
+  if (!error) return;
+
+  const icon = document.createElement('i');
+  icon.className = 'bi bi-exclamation-triangle-fill me-2';
+  icon.setAttribute('aria-hidden', 'true');
+  error.replaceChildren(icon, document.createTextNode(message));
+  error.classList.remove('d-none');
 }
 
 function validateForm(form) {
