@@ -424,12 +424,10 @@ function initRecaptcha() {
 
   if (
     !config?.recaptchaSiteKey ||
-    config.recaptchaSiteKey.includes('REMPLACER') ||
-    !config.verificationEndpoint ||
-    config.verificationEndpoint.includes('REMPLACER')
+    config.recaptchaSiteKey.includes('REMPLACER')
   ) {
     status.textContent =
-      'Configuration requise : ajoutez les clés reCAPTCHA et l’URL du Worker.';
+      'Configuration requise : ajoutez la clé publique reCAPTCHA.';
     status.classList.add('captcha-status--error');
     return;
   }
