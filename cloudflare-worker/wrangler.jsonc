@@ -1,0 +1,8 @@
+{
+  "name": "portfolio-contact-recaptcha",
+  "main": "src/index.mjs",
+  "compatibility_date": "2026-09-30",
+  "vars": {
+    "ALLOWED_ORIGIN": "https://YOUR-USERNAME.github.io"
+  }
+}

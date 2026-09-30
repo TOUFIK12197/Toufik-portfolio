@@ -1,0 +1,2753 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio – Toufik Ait Amrane</title>
+    <meta
+      name="description"
+      content="Portfolio de Toufik Ait Amrane, étudiant BTS SIO option SLAM, à la recherche d'une alternance en développement Full Stack et Data Visualisation."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>◈</text></svg>"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ═══════════════ NAVBAR ═══════════════ -->
+    <nav
+      class="navbar navbar-expand-lg fixed-top"
+      id="mainNav"
+      aria-label="Navigation principale"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#hero">
+          <span class="brand-dot">◈</span> Toufik Ait Amrane
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link" href="#apropos">À propos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#bts">Ma formation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#competences">Compétences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projets">Projets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experiences">Expériences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#veille">Veille</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <a
+                class="btn-nav-cv"
+                href="assets/documents/cv.pdf"
+                download
+                aria-label="Télécharger le CV PDF"
+              >
+                <i class="bi bi-download me-1"></i>CV
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section
+      id="hero"
+      class="hero-section"
+      aria-label="Présentation principale"
+    >
+      <div class="hero-bg-blob" aria-hidden="true"></div>
+      <div class="container h-100">
+        <div class="row align-items-center h-100 py-5">
+          <!-- Texte -->
+          <div class="col-lg-6 hero-content">
+            <h1 class="hero-title">
+              Toufik<br />
+              <span class="hero-name-accent">Ait Amrane</span>
+            </h1>
+            <p class="hero-tagline">
+              Développeur
+              <span class="gradient-text">Full Stack</span>
+              &amp; passionné de data
+            </p>
+            <p class="hero-description">
+              Développeur polyvalent, je recherche
+              <strong>une alternance</strong>, disponible
+              <strong>dès maintenant</strong>. Mon profil est axé sur le
+              <strong>développement full stack</strong> et la
+              <strong>Data Visualisation</strong>, avec l'envie d'intégrer une
+              équipe innovante.
+            </p>
+            <div class="hero-actions d-flex flex-wrap gap-3 mt-4">
+              <a href="#projets" class="btn-primary-custom">
+                Voir mes projets <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+              <a
+                href="assets/documents/cv.pdf"
+                download
+                class="btn-outline-custom"
+              >
+                <i class="bi bi-download me-1"></i>Consulter mon CV
+              </a>
+            </div>
+            <div class="hero-socials mt-4 d-flex gap-3">
+              <a
+                href="https://github.com/toufik12197"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+                class="social-icon"
+              >
+                <i class="bi bi-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/toufik-ait-amrane-36b761384/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                class="social-icon"
+              >
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a
+                href="mailto:aitamranetoufik97@gmail.com"
+                aria-label="Email"
+                class="social-icon"
+              >
+                <i class="bi bi-envelope-fill"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Visuel -->
+          <div
+            class="col-lg-6 hero-visual d-flex flex-column align-items-center mt-5 mt-lg-0"
+          >
+            <div class="hero-avatar-wrapper">
+              <img
+                src="assets/images/profil.jpeg"
+                alt="Photo de profil de Toufik Ait Amrane"
+                class="hero-avatar"
+                width="180"
+                height="180"
+              />
+              <div class="avatar-ring" aria-hidden="true"></div>
+            </div>
+            <div class="hero-stats d-flex gap-4 mt-4">
+              <div class="stat-card text-center">
+                <span class="stat-number" data-count="5" data-suffix="+"
+                  >0</span
+                >
+                <span class="stat-label">Projets</span>
+              </div>
+              <div class="stat-card text-center">
+                <span class="stat-number" data-count="3" data-suffix="+"
+                  >0</span
+                >
+                <span class="stat-label">Stages</span>
+              </div>
+              <div class="stat-card text-center">
+                <span class="stat-number" data-count="3" data-suffix="+"
+                  >0</span
+                >
+                <span class="stat-label">Diplômes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        href="#apropos"
+        class="scroll-indicator"
+        aria-label="Défiler vers la suite"
+      >
+        <i class="bi bi-chevron-double-down"></i>
+      </a>
+    </section>
+
+    <!-- ═══════════════ À PROPOS ═══════════════ -->
+    <section
+      id="apropos"
+      class="section-padding bg-surface"
+      aria-labelledby="apropos-title"
+    >
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <h2 class="section-label" id="apropos-title">À PROPOS</h2>
+        </div>
+
+        <div class="row align-items-start g-5">
+          <!-- Carte infos (gauche) -->
+          <div class="col-lg-4">
+            <div class="about-info-card">
+              <div class="about-avatar-wrapper mb-4 text-center">
+                <img
+                  src="assets/images/profil.jpeg"
+                  alt="Photo de profil de Toufik Ait Amrane"
+                  class="about-avatar"
+                  width="120"
+                  height="120"
+                />
+              </div>
+
+              <div class="text-center mb-4">
+                <h3 class="about-card-name">Toufik Ait Amrane</h3>
+                <span class="about-card-status"
+                  >Étudiant BTS SIO – Option SLAM</span
+                >
+              </div>
+
+              <div class="info-item">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span>Savigny-sur-Orge, France</span>
+              </div>
+
+              <div class="info-item">
+                <i class="bi bi-rocket-takeoff-fill"></i>
+                <span>Alternance – disponible maintenant</span>
+              </div>
+              <div class="info-item">
+                <i class="bi bi-envelope-fill"></i>
+                <span>aitamranetoufik97@gmail.com</span>
+              </div>
+
+              <div class="about-divider my-4"></div>
+
+              <p class="info-section-label">Langues</p>
+              <div class="d-flex flex-wrap gap-2">
+                <div class="lang-badge">
+                  <span class="lang-flag">AR</span>
+                  <span class="lang-name">Arabe</span>
+                  <span class="lang-level">Natif</span>
+                </div>
+                <div class="lang-badge">
+                  <span class="lang-flag">FR</span>
+                  <span class="lang-name">Français</span>
+                  <span class="lang-level">C1</span>
+                </div>
+                <div class="lang-badge">
+                  <span class="lang-flag">GB</span>
+                  <span class="lang-name">Anglais</span>
+                  <span class="lang-level">A2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Texte + timeline (droite) -->
+          <div class="col-lg-8">
+            <p class="about-text">
+              Passionné par le développement web, je m'investis dans la création
+              de solutions logicielles alliant performance et durabilité. À la
+              recherche d’une <strong>alternance</strong>, disponible
+              <strong>dès maintenant</strong>, je souhaite intégrer une
+              structure innovante pour relever des défis techniques en
+              <strong>développement Full Stack</strong> ou en
+              <strong>Data Visualisation</strong>.
+            </p>
+
+            <p class="about-text mt-3">
+              Mon parcours atypique — d'un Master en Génie des Procédés à
+              l'informatique — m'a forgé une rigueur analytique, une vraie
+              curiosité technique et une capacité d'adaptation que je mets au
+              service de chaque projet.
+            </p>
+
+            <div class="timeline mt-5" aria-label="Parcours de formation">
+              <h3 class="timeline-title mb-4">Parcours</h3>
+
+              <div class="timeline-item">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2025 – 2027</span>
+                  <h3 class="timeline-title">BTS SIO – Option SLAM</h3>
+                  <p class="timeline-sub">Scholia Paris — en cours</p>
+                  <p class="timeline-detail">
+                    Développement web et mobile, bases de données,
+                    cybersécurité, gestion de projet et systèmes.
+                  </p>
+                  <div class="timeline-tags">
+                    <span class="tag tag--sm">HTML/CSS</span>
+                    <span class="tag tag--sm">PHP</span>
+                    <span class="tag tag--sm">Java</span>
+                    <span class="tag tag--sm">MySQL</span>
+                    <span class="tag tag--sm">Python</span>
+                    <span class="tag tag--sm">Git</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2020 – 2022</span>
+                  <h3 class="timeline-title">
+                    Master – Génie des Procédés des Matériaux
+                  </h3>
+                  <p class="timeline-sub">Mention Très Bien</p>
+                  <p class="timeline-detail">
+                    Modélisation, rigueur scientifique, rédaction technique,
+                    projets appliqués.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2016 – 2020</span>
+                  <h3 class="timeline-title">Licence – Génie des Procédés</h3>
+                  <p class="timeline-sub">Mention Bien</p>
+                  <p class="timeline-detail">
+                    Fondamentaux scientifiques et industriels, analyse et
+                    méthodologie.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2016</span>
+                  <h3 class="timeline-title">
+                    Baccalauréat – Génie des Procédés
+                  </h3>
+                  <p class="timeline-sub">Mention Bien</p>
+                  <p class="timeline-detail">
+                    Spécialisation procédés et contrôle de production.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ BTS SIO ═══════════════ -->
+    <section
+      id="bts"
+      class="section-padding bg-white"
+      aria-labelledby="bts-title"
+    >
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <h2 class="section-label" id="bts-title">MA FORMATION</h2>
+        </div>
+
+        <!-- Présentation générale -->
+        <div class="bts-intro text-center mb-5">
+          <p class="bts-intro-text">
+            Le
+            <strong>BTS SIO (Services Informatiques aux Organisations)</strong>
+            est une formation de 2 ans qui prépare aux métiers de
+            l'informatique. Elle se divise en deux spécialités :
+            <strong>SLAM</strong> (développement) et
+            <strong>SISR</strong> (réseaux et infrastructure).
+          </p>
+        </div>
+
+        <!-- Comparaison SLAM / SISR -->
+        <div class="row g-4 mb-5">
+          <!-- SLAM -->
+          <div class="col-lg-6">
+            <div class="bts-card bts-card--active">
+              <div class="bts-card-header">
+                <div class="bts-badge bts-badge--slam">Ma spécialité</div>
+                <h3 class="bts-card-title">
+                  <i class="bi bi-code-slash me-2"></i>SLAM
+                </h3>
+                <p class="bts-card-subtitle">
+                  Solutions Logicielles et Applications Métiers
+                </p>
+              </div>
+              <div class="bts-card-body">
+                <p class="bts-card-desc">
+                  Conception, développement et maintenance de solutions
+                  informatiques adaptées aux besoins des organisations.
+                  Programmation, bases de données, sécurité applicative et
+                  gestion de projets logiciels.
+                </p>
+                <ul class="bts-list">
+                  <li>
+                    <i class="bi bi-check-circle-fill text-accent"></i>
+                    Développement web (front-end &amp; back-end)
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-accent"></i>
+                    Conception de bases de données (MERISE, UML)
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-accent"></i>
+                    Programmation orientée objet (Java, Python, PHP)
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-accent"></i>
+                    Sécurité applicative et authentification
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-accent"></i>
+                    Gestion de projet et versionnement (Git)
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-accent"></i>
+                    Intelligence artificielle et data visualisation
+                  </li>
+                </ul>
+                <div class="bts-tags mt-3">
+                  <span class="tag">Java</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">PHP</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">MySQL</span>
+                  <span class="tag">MongoDB</span>
+                  <span class="tag">React</span>
+                  <span class="tag">Git</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SISR -->
+          <div class="col-lg-6">
+            <div class="bts-card bts-card--inactive">
+              <div class="bts-card-header">
+                <div class="bts-badge bts-badge--sisr">Autre voie</div>
+                <h3 class="bts-card-title">
+                  <i class="bi bi-hdd-network me-2"></i>SISR
+                </h3>
+                <p class="bts-card-subtitle">
+                  Solutions d'Infrastructure, Systèmes et Réseaux
+                </p>
+              </div>
+              <div class="bts-card-body">
+                <p class="bts-card-desc">
+                  Administration des systèmes informatiques, gestion des
+                  réseaux, cybersécurité des infrastructures et support
+                  technique. Orienté serveurs, virtualisation et maintenance.
+                </p>
+                <ul class="bts-list">
+                  <li>
+                    <i class="bi bi-circle text-muted"></i>
+                    Administration réseaux (LAN, WAN, Wi-Fi)
+                  </li>
+                  <li>
+                    <i class="bi bi-circle text-muted"></i>
+                    Gestion des serveurs (Windows Server, Linux)
+                  </li>
+                  <li>
+                    <i class="bi bi-circle text-muted"></i>
+                    Virtualisation (VMware, Hyper-V)
+                  </li>
+                  <li>
+                    <i class="bi bi-circle text-muted"></i>
+                    Cybersécurité des infrastructures
+                  </li>
+                  <li>
+                    <i class="bi bi-circle text-muted"></i>
+                    Support et assistance technique
+                  </li>
+                  <li>
+                    <i class="bi bi-circle text-muted"></i>
+                    Supervision et monitoring des systèmes
+                  </li>
+                </ul>
+                <div class="bts-tags mt-3">
+                  <span class="tag tag--muted">Cisco</span>
+                  <span class="tag tag--muted">Linux</span>
+                  <span class="tag tag--muted">Windows Server</span>
+                  <span class="tag tag--muted">VMware</span>
+                  <span class="tag tag--muted">Active Directory</span>
+                  <span class="tag tag--muted">Firewall</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pourquoi SLAM -->
+        <div class="bts-why mt-5">
+          <div class="bts-why-inner">
+            <div class="bts-why-icon">
+              <i class="bi bi-patch-question-fill"></i>
+            </div>
+            <div>
+              <h3 class="bts-why-title">Pourquoi j'ai choisi SLAM ?</h3>
+              <p class="bts-why-text">
+                Motivé par la création de solutions logicielles et l'envie de
+                résoudre des problématiques concrètes par le code, j’ai
+                naturellement choisi l'option SLAM. Du développement
+                d’applications web à la gestion des bases de données, en passant
+                par l'exploration de l'IA, je m’investis pour concevoir des
+                projets à forte valeur ajoutée pour les utilisateurs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ COMPÉTENCES ═══════════════ -->
+    <section
+      id="competences"
+      class="section-padding bg-surface"
+      aria-labelledby="comp-title"
+    >
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <h2 class="section-label" id="comp-title">COMPÉTENCES</h2>
+        </div>
+
+        <!-- Tabs -->
+        <ul class="nav comp-tabs justify-content-center mb-5" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="comp-tab active"
+              data-bs-toggle="tab"
+              data-bs-target="#tab-web"
+              type="button"
+              role="tab"
+              aria-controls="tab-web"
+              aria-selected="true"
+            >
+              Langages &amp; Web
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button
+              class="comp-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#tab-design"
+              type="button"
+              role="tab"
+              aria-controls="tab-design"
+              aria-selected="false"
+            >
+              Conception &amp; UX
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="comp-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#tab-tools"
+              type="button"
+              role="tab"
+              aria-controls="tab-tools"
+              aria-selected="false"
+            >
+              Outils &amp; Projet
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button
+              class="comp-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#tab-data"
+              type="button"
+              role="tab"
+              aria-controls="tab-data"
+              aria-selected="false"
+            >
+              Data &amp; IA
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button
+              class="comp-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#tab-soft"
+              type="button"
+              role="tab"
+              aria-controls="tab-soft"
+              aria-selected="false"
+            >
+              Transversales
+            </button>
+          </li>
+        </ul>
+
+        <!-- Contenu -->
+        <div class="tab-content">
+          <!-- 1) Langages & Web -->
+          <div class="tab-pane fade show active" id="tab-web" role="tabpanel">
+            <div class="comp-panel">
+              <h3 class="comp-panel-title">Langages et développement web</h3>
+              <div class="row g-4">
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/java.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">Java</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="70"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Java 70%"
+                    >
+                      <div class="skill-bar" data-width="70"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/python.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">Python</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="68"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Python 68%"
+                    >
+                      <div class="skill-bar" data-width="68"></div>
+                    </div>
+                    <span class="skill-percent">68%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/javascript.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">JavaScript</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="70"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="JavaScript 70%"
+                    >
+                      <div class="skill-bar" data-width="70"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/php.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">PHP</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="65"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="PHP 65%"
+                    >
+                      <div class="skill-bar" data-width="65"></div>
+                    </div>
+                    <span class="skill-percent">65%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/sql.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">SQL</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="75"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="SQL 75%"
+                    >
+                      <div class="skill-bar" data-width="75"></div>
+                    </div>
+                    <span class="skill-percent">75%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/html.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">HTML</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="85"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="HTML 85%"
+                    >
+                      <div class="skill-bar" data-width="85"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/css.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">CSS</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="85"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="CSS 85%"
+                    >
+                      <div class="skill-bar" data-width="85"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/react.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">React</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="40"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="React 40%"
+                    >
+                      <div class="skill-bar" data-width="40"></div>
+                    </div>
+                    <span class="skill-percent">40%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/nodejs.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">Node.js</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="40"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Node.js 40%"
+                    >
+                      <div class="skill-bar" data-width="40"></div>
+                    </div>
+                    <span class="skill-percent">40%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/api-rest.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">API REST</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="65"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="API REST 65%"
+                    >
+                      <div class="skill-bar" data-width="65"></div>
+                    </div>
+                    <span class="skill-percent">65%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2) Data & IA -->
+          <div class="tab-pane fade" id="tab-data" role="tabpanel">
+            <div class="comp-panel">
+              <h3 class="comp-panel-title">
+                Données et intelligence artificielle
+              </h3>
+              <div class="row g-4">
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/mysql.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">MySQL</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="75"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="MySQL 75%"
+                    >
+                      <div class="skill-bar" data-width="75"></div>
+                    </div>
+                    <span class="skill-percent">75%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/postgresql.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">PostgreSQL</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="55"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="PostgreSQL 55%"
+                    >
+                      <div class="skill-bar" data-width="55"></div>
+                    </div>
+                    <span class="skill-percent">55%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/mongodb.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">MongoDB</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="55"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="MongoDB 55%"
+                    >
+                      <div class="skill-bar" data-width="55"></div>
+                    </div>
+                    <span class="skill-percent">55%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/pandas.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">Pandas</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="60"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Pandas 60%"
+                    >
+                      <div class="skill-bar" data-width="60"></div>
+                    </div>
+                    <span class="skill-percent">60%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/numpy.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">NumPy</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="55"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="NumPy 55%"
+                    >
+                      <div class="skill-bar" data-width="55"></div>
+                    </div>
+                    <span class="skill-percent">55%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/sklearn.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">scikit-learn</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="scikit-learn 50%"
+                    >
+                      <div class="skill-bar" data-width="50"></div>
+                    </div>
+                    <span class="skill-percent">50%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/pytorch.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">PyTorch</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="45"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="PyTorch 45%"
+                    >
+                      <div class="skill-bar" data-width="45"></div>
+                    </div>
+                    <span class="skill-percent">45%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/jupyter.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">Jupyter</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="65"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Jupyter 65%"
+                    >
+                      <div class="skill-bar" data-width="65"></div>
+                    </div>
+                    <span class="skill-percent">65%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/nlp.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">NLP</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="55"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="NLP 55%"
+                    >
+                      <div class="skill-bar" data-width="55"></div>
+                    </div>
+                    <span class="skill-percent">55%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/data-analysis.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">Analyse de données</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="65"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Analyse de données 65%"
+                    >
+                      <div class="skill-bar" data-width="65"></div>
+                    </div>
+                    <span class="skill-percent">65%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3) Conception / UX -->
+          <div class="tab-pane fade" id="tab-design" role="tabpanel">
+            <div class="comp-panel">
+              <h3 class="comp-panel-title">
+                Conception, UX/UI et modélisation
+              </h3>
+              <div class="row g-4">
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/uml.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">UML</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="70"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="UML 70%"
+                    >
+                      <div class="skill-bar" data-width="70"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/merise.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">Merise</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="70"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Merise 70%"
+                    >
+                      <div class="skill-bar" data-width="70"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/mvc.jpg"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">MVC</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="70"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="MVC 70%"
+                    >
+                      <div class="skill-bar" data-width="70"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/figma.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">Figma</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="60"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Figma 60%"
+                    >
+                      <div class="skill-bar" data-width="60"></div>
+                    </div>
+                    <span class="skill-percent">60%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/canva.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">Canva</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="75"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Canva 75%"
+                    >
+                      <div class="skill-bar" data-width="75"></div>
+                    </div>
+                    <span class="skill-percent">75%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/responsive.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">Responsive design</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Responsive 80%"
+                    >
+                      <div class="skill-bar" data-width="80"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/accessibility.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">Accessibilité web</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="65"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Accessibilité 65%"
+                    >
+                      <div class="skill-bar" data-width="65"></div>
+                    </div>
+                    <span class="skill-percent">65%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4) Outils / Projet -->
+          <div class="tab-pane fade" id="tab-tools" role="tabpanel">
+            <div class="comp-panel">
+              <h3 class="comp-panel-title">Outils et gestion de projet</h3>
+              <div class="row g-4">
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/git.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">Git</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Git 80%"
+                    >
+                      <div class="skill-bar" data-width="80"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/github.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">GitHub</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="GitHub 80%"
+                    >
+                      <div class="skill-bar" data-width="80"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/vscode.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">VS Code</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="85"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="VS Code 85%"
+                    >
+                      <div class="skill-bar" data-width="85"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/eclipse.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">Eclipse</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Eclipse 80%"
+                    >
+                      <div class="skill-bar" data-width="80"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/intellij.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">IntelliJ IDEA</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="60"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="IntelliJ IDEA 60%"
+                    >
+                      <div class="skill-bar" data-width="60"></div>
+                    </div>
+                    <span class="skill-percent">60%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/postman.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">Postman</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="65"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Postman 65%"
+                    >
+                      <div class="skill-bar" data-width="65"></div>
+                    </div>
+                    <span class="skill-percent">65%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/agile.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">Agile / Scrum</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="65"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Agile Scrum 65%"
+                    >
+                      <div class="skill-bar" data-width="65"></div>
+                    </div>
+                    <span class="skill-percent">65%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card">
+                    <div class="skill-card-header">
+                      <img
+                        src="assets/images/icons/powerbi.png"
+                        alt=""
+                        class="comp-badge-icon-lg"
+                      />
+                      <h4 class="skill-name">Power BI</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="65"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Power BI 65%"
+                    >
+                      <div class="skill-bar" data-width="65"></div>
+                    </div>
+                    <span class="skill-percent">65%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5) Transversales -->
+          <div class="tab-pane fade" id="tab-soft" role="tabpanel">
+            <div class="comp-panel comp-panel--soft">
+              <h3 class="comp-panel-title">Compétences transversales</h3>
+              <div class="row g-4">
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card skill-card--soft">
+                    <div class="skill-card-header">
+                      <i class="bi bi-people-fill skill-icon-bi"></i>
+                      <h4 class="skill-name">Travail en équipe</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="90"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Travail en équipe 90%"
+                    >
+                      <div class="skill-bar" data-width="90"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card skill-card--soft">
+                    <div class="skill-card-header">
+                      <i class="bi bi-person-check-fill skill-icon-bi"></i>
+                      <h4 class="skill-name">Autonomie</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="85"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Autonomie 85%"
+                    >
+                      <div class="skill-bar" data-width="85"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card skill-card--soft">
+                    <div class="skill-card-header">
+                      <i class="bi bi-chat-dots-fill skill-icon-bi"></i>
+                      <h4 class="skill-name">Communication</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="85"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Communication 85%"
+                    >
+                      <div class="skill-bar" data-width="85"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                  <div class="skill-card skill-card--soft">
+                    <div class="skill-card-header">
+                      <i class="bi bi-lightbulb-fill skill-icon-bi"></i>
+                      <h4 class="skill-name">Résolution de problèmes</h4>
+                    </div>
+                    <div
+                      class="skill-bar-wrapper"
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Résolution problèmes 80%"
+                    >
+                      <div class="skill-bar" data-width="80"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ PROJETS ═══════════════ -->
+    <section
+      id="projets"
+      class="section-padding bg-white"
+      aria-labelledby="projets-title"
+    >
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <h2 class="section-label" id="projets-title">RÉALISATIONS</h2>
+        </div>
+
+        <!-- Filtres -->
+        <div
+          class="projects-filters d-flex flex-wrap justify-content-center gap-2 mb-5"
+          role="group"
+          aria-label="Filtrer les projets"
+        >
+          <button class="filter-btn active" data-filter="all">
+            <i class="bi bi-grid-3x3-gap me-1"></i>Tous
+          </button>
+          <button class="filter-btn" data-filter="professionnel">
+            <i class="bi bi-briefcase me-1"></i>Professionnel
+          </button>
+          <button class="filter-btn" data-filter="academique">
+            <i class="bi bi-mortarboard me-1"></i>Académique
+          </button>
+          <button class="filter-btn" data-filter="personnel">
+            <i class="bi bi-person me-1"></i>Personnel
+          </button>
+        </div>
+
+        <!-- Grille -->
+        <div class="row g-4" id="projects-grid">
+          <!-- EduSIO — professionnel -->
+          <div
+            class="col-md-6 col-lg-4 project-item"
+            data-category="professionnel"
+          >
+            <article class="project-card h-100">
+              <div class="project-img-wrapper">
+                <img
+                  src="assets/images/projet-edusio.jpg"
+                  alt="Capture EduSIO"
+                  class="project-img"
+                  loading="lazy"
+                  width="400"
+                  height="220"
+                />
+                <div class="project-overlay">
+                  <i class="bi bi-eye-fill"></i>
+                </div>
+              </div>
+              <div class="project-body d-flex flex-column">
+                <div
+                  class="project-type-badge project-type-badge--professionnel mb-2"
+                >
+                  <i class="bi bi-briefcase me-1"></i>Projet professionnel
+                </div>
+                <div class="project-tags mb-2">
+                  <span class="tag">Java</span>
+                  <span class="tag">Spring Boot</span>
+                  <span class="tag">MongoDB</span>
+                </div>
+                <h3 class="project-title">EduSIO – Plateforme éducative</h3>
+                <p class="project-desc">
+                  Orchestration des requêtes administratives, validation
+                  multi-règles, métadonnées automatiques (UUID, timestamp,
+                  versioning), persistance MongoDB et moteur de workflow.
+                </p>
+                <div class="project-meta mt-auto">
+                  <span class="project-context">
+                    <i class="bi bi-briefcase-fill me-1"></i>Stage – Avr. 2026 –
+                    Avr. 2027
+                  </span>
+                </div>
+                <div class="project-actions d-flex gap-2 mt-3">
+                  <a
+                    href="assets/documents/cahier_charges_plateforme_BTS_SIO.pdf"
+                    class="btn-primary-custom btn-sm-custom"
+                  >
+                    Plus de details <i class="bi bi-arrow-right ms-1"></i>
+                  </a>
+                  <a
+                    href="https://github.com/toufik12197"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn-outline-custom btn-sm-custom"
+                    aria-label="GitHub EduSIO"
+                  >
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- VoisinPartage — academique -->
+          <div
+            class="col-md-6 col-lg-4 project-item"
+            data-category="academique"
+          >
+            <article class="project-card h-100">
+              <div class="project-img-wrapper">
+                <img
+                  src="assets/images/projet-voisinpartage.jpeg"
+                  alt="Capture VoisinPartage"
+                  class="project-img"
+                  loading="lazy"
+                  width="400"
+                  height="220"
+                />
+                <div class="project-overlay">
+                  <i class="bi bi-eye-fill"></i>
+                </div>
+              </div>
+              <div class="project-body d-flex flex-column">
+                <div
+                  class="project-type-badge project-type-badge--academique mb-2"
+                >
+                  <i class="bi bi-mortarboard me-1"></i>Projet académique
+                </div>
+                <div class="project-tags mb-2">
+                  <span class="tag">PHP</span>
+                  <span class="tag">MySQL</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+                <h3 class="project-title">VoisinPartage</h3>
+                <p class="project-desc">
+                  Application web collaborative de partage d'objets entre
+                  voisins : gestion d'annonces, messagerie privée, back-office
+                  administrateur. Sécurité applicative (CSRF, XSS, PDO).
+                </p>
+                <div class="project-meta mt-auto">
+                  <span class="project-context">
+                    <i class="bi bi-people-fill me-1"></i>Projet groupe BTS SIO
+                    – 2026
+                  </span>
+                </div>
+                <div class="project-actions d-flex gap-2 mt-3">
+                  <a
+                    href="assets/documents/cahier_de_charge_voisin.pdf"
+                    class="btn-primary-custom btn-sm-custom"
+                  >
+                    Plus de details <i class="bi bi-arrow-right ms-1"></i>
+                  </a>
+                  <a
+                    href="https://github.com/TOUFIK12197/Voisin-partage"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn-outline-custom btn-sm-custom"
+                    aria-label="GitHub VoisinPartage"
+                  >
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- CliniqueApp — academique -->
+          <div
+            class="col-md-6 col-lg-4 project-item"
+            data-category="academique"
+          >
+            <article class="project-card h-100">
+              <div class="project-img-wrapper">
+                <img
+                  src="assets/images/projet-clinique.jpeg"
+                  alt="Capture CliniqueApp"
+                  class="project-img"
+                  loading="lazy"
+                  width="400"
+                  height="220"
+                />
+                <div class="project-overlay">
+                  <i class="bi bi-eye-fill"></i>
+                </div>
+              </div>
+              <div class="project-body d-flex flex-column">
+                <div
+                  class="project-type-badge project-type-badge--academique mb-2"
+                >
+                  <i class="bi bi-mortarboard me-1"></i>Projet académique
+                </div>
+                <div class="project-tags mb-2">
+                  <span class="tag">Java EE</span>
+                  <span class="tag">JSP</span>
+                  <span class="tag">MySQL</span>
+                </div>
+                <h3 class="project-title">CliniqueApp</h3>
+                <p class="project-desc">
+                  Application web de gestion de clinique : connexion sécurisée,
+                  gestion des patients, rendez-vous, consultations, documents
+                  médicaux et tableau de bord selon le rôle utilisateur.
+                </p>
+                <div class="project-meta mt-auto">
+                  <span class="project-context">
+                    <i class="bi bi-people-fill me-1"></i>Projet groupe BTS SIO
+                    – 2026
+                  </span>
+                </div>
+                <div class="project-actions d-flex gap-2 mt-3">
+                  <a
+                    href="assets/documents/cahier_de_charge_clinique.pdf"
+                    class="btn-primary-custom btn-sm-custom"
+                  >
+                    Plus de details <i class="bi bi-arrow-right ms-1"></i>
+                  </a>
+                  <a
+                    href="https://github.com/TOUFIK12197/CliniqueApp"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn-outline-custom btn-sm-custom"
+                    aria-label="GitHub CliniqueApp"
+                  >
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- OMAZA — personnel -->
+          <div class="col-md-6 col-lg-4 project-item" data-category="personnel">
+            <article class="project-card h-100">
+              <div class="project-img-wrapper">
+                <img
+                  src="assets/images/projet-omaza.jpeg"
+                  alt="Capture OMAZA"
+                  class="project-img"
+                  loading="lazy"
+                  width="400"
+                  height="220"
+                />
+                <div class="project-overlay">
+                  <i class="bi bi-eye-fill"></i>
+                </div>
+              </div>
+              <div class="project-body d-flex flex-column">
+                <div
+                  class="project-type-badge project-type-badge--personnel mb-2"
+                >
+                  <i class="bi bi-person me-1"></i>Projet personnel
+                </div>
+                <div class="project-tags mb-2">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Firebase</span>
+                </div>
+                <h3 class="project-title">OMAZA – Contrôle Technique</h3>
+                <p class="project-desc">
+                  Application de réservation de rendez-vous avec espace client
+                  et administrateur, devis, gestion des créneaux, notifications
+                  e-mail et suivi des statuts via Firebase & EmailJS.
+                </p>
+                <div class="project-meta mt-auto">
+                  <span class="project-context">
+                    <i class="bi bi-person-fill me-1"></i>Projet personnel –
+                    2026
+                  </span>
+                </div>
+                <div class="project-actions d-flex gap-2 mt-3">
+                  <a
+                    href="https://omaza-ct.web.app/"
+                    class="btn-primary-custom btn-sm-custom"
+                  >
+                    Voir le site <i class="bi bi-arrow-right ms-1"></i>
+                  </a>
+                  <a
+                    href="https://github.com/TOUFIK12197/Omaza-Controle-Technique"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn-outline-custom btn-sm-custom"
+                    aria-label="GitHub OMAZA"
+                  >
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Coach Sportif IA — personnel -->
+          <div class="col-md-6 col-lg-4 project-item" data-category="personnel">
+            <article class="project-card h-100">
+              <div class="project-img-wrapper">
+                <img
+                  src="assets/images/projet-coach-ia.jpg"
+                  alt="Capture Coach Sportif IA"
+                  class="project-img"
+                  loading="lazy"
+                  width="400"
+                  height="220"
+                />
+                <div class="project-overlay">
+                  <i class="bi bi-eye-fill"></i>
+                </div>
+              </div>
+              <div class="project-body d-flex flex-column">
+                <div
+                  class="project-type-badge project-type-badge--personnel mb-2"
+                >
+                  <i class="bi bi-person me-1"></i>Projet personnel
+                </div>
+                <div class="project-tags mb-2">
+                  <span class="tag">Flask</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">NLP</span>
+                  <span class="tag">IA</span>
+                </div>
+                <h3 class="project-title">Coach Sportif IA</h3>
+                <p class="project-desc">
+                  Application web de coaching sportif personnalisé par IA :
+                  chatbot NLP hybride, génération de programmes sur 4 semaines,
+                  suivi de progression et conseils via LLM local (Ollama).
+                </p>
+                <div class="project-meta mt-auto">
+                  <span class="project-context">
+                    <i class="bi bi-person-fill me-1"></i>Projet Atelier – 2026
+                  </span>
+                </div>
+                <div class="project-actions d-flex gap-2 mt-3">
+                  <a
+                    href="assets/documents/Coach Sportif IA.pdf"
+                    class="btn-primary-custom btn-sm-custom"
+                  >
+                    Plus de details <i class="bi bi-arrow-right ms-1"></i>
+                  </a>
+                  <a
+                    href="https://github.com/TOUFIK12197/Coach-Sportif-"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn-outline-custom btn-sm-custom"
+                    aria-label="GitHub Coach IA"
+                  >
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ EXPÉRIENCES ═══════════════ -->
+    <section
+      id="experiences"
+      class="section-padding bg-surface"
+      aria-labelledby="exp-title"
+    >
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <h2 class="section-label" id="exp-title">EXPÉRIENCES</h2>
+          <div class="exp-dot exp-dot--start" aria-hidden="true"></div>
+        </div>
+
+        <div class="experience-featured">
+          <div class="exp-card exp-card--journey">
+            <!-- Date -->
+            <div class="journey-date-pill">
+              <i class="bi bi-calendar3 me-2"></i>Avr. 2026 – Avr. 2027
+            </div>
+
+            <!-- Header -->
+            <div class="journey-header">
+              <div class="journey-header-left">
+                <div class="journey-icon" aria-hidden="true">
+                  <i class="bi bi-building"></i>
+                </div>
+                <div>
+                  <h3 class="journey-title">
+                    Laboratoire d’Informatique Intelligente
+                  </h3>
+                  <p class="journey-subtitle">
+                    <i class="bi bi-geo-alt me-1"></i>Biskra, Algérie
+                  </p>
+                </div>
+              </div>
+
+              <div class="journey-badge">STAGE</div>
+            </div>
+
+            <!-- Intro -->
+            <div class="journey-intro">
+              <p class="journey-intro-title">
+                Parcours en 3 étapes au sein du même projet
+              </p>
+              <p class="journey-intro-text">
+                Une progression continue sur la plateforme
+                <strong>EduSIO</strong>, avec des missions de plus en plus
+                avancées.
+              </p>
+            </div>
+
+            <!-- 3 étapes -->
+            <div class="row g-4 journey-steps">
+              <!-- Étape 01 (DONE) -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <article class="journey-step journey-step--done h-100">
+                  <div class="journey-step-top">
+                    <div class="journey-step-number">01</div>
+                    <div>
+                      <p class="journey-step-dates">Avr. 2026 – Juin 2026</p>
+                      <h4 class="journey-step-title">Stage d’initiation</h4>
+                      <p class="journey-step-sub">
+                        Découverte de l’environnement et intégration
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="journey-mini-progress"
+                    aria-label="Progression étape 1"
+                  >
+                    <div class="journey-mini-progress-bg">
+                      <div class="journey-progress-bar" data-width="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="journey-step-section">
+                    <p class="journey-step-section-title">
+                      <i class="bi bi-bullseye me-2"></i>Objectifs
+                    </p>
+                    <p class="journey-step-section-text">
+                      Orchestrer des requêtes administratives et fiabiliser les
+                      données entrantes.
+                    </p>
+                  </div>
+
+                  <div class="journey-step-section">
+                    <p class="journey-step-section-title">
+                      <i class="bi bi-check2-square me-2"></i>Missions
+                      principales
+                    </p>
+                    <ul class="journey-list">
+                      <li>Validation des données entrantes</li>
+                      <li>
+                        Métadonnées automatiques (UUID, timestamp, versioning)
+                      </li>
+                      <li>Persistance MongoDB + transmission au workflow</li>
+                    </ul>
+                  </div>
+
+                  <div class="journey-step-section">
+                    <p class="journey-step-section-title">
+                      <i class="bi bi-gear me-2"></i>Technologies
+                    </p>
+                    <div class="journey-tags">
+                      <span class="tag">Java</span>
+                      <span class="tag">Spring Boot</span>
+                      <span class="tag">MongoDB</span>
+                      <span class="tag">Spring Data</span>
+                    </div>
+                  </div>
+
+                  <div class="journey-step-section">
+                    <p class="journey-step-section-title">
+                      <i class="bi bi-bar-chart-line me-2"></i>Compétences
+                      acquises
+                    </p>
+                    <ul class="journey-list">
+                      <li>Services Spring (@Service, @Autowired)</li>
+                      <li>Repository Pattern</li>
+                      <li>Documentation (Javadoc)</li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Étape 02 (DONE) -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <article class="journey-step journey-step--done h-100">
+                  <div class="journey-step-top">
+                    <div class="journey-step-number">02</div>
+                    <div>
+                      <p class="journey-step-dates">Juil. – Sept. 2026</p>
+                      <h4 class="journey-step-title">
+                        Stage de perfectionnement
+                      </h4>
+                      <p class="journey-step-sub">Autonomie et développement</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="journey-mini-progress"
+                    aria-label="Progression étape 2"
+                  >
+                    <div class="journey-mini-progress-bg">
+                      <div class="journey-progress-bar" data-width="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="journey-step-section">
+                    <p class="journey-step-section-title">
+                      <i class="bi bi-bullseye me-2"></i>Objectifs
+                    </p>
+                    <p class="journey-step-section-text">
+                      Implémenter un système de validation robuste (règles +
+                      résultats + persistance).
+                    </p>
+                  </div>
+
+                  <div class="journey-step-section">
+                    <p class="journey-step-section-title">
+                      <i class="bi bi-check2-square me-2"></i>Missions
+                      principales
+                    </p>
+                    <ul class="journey-list">
+                      <li>Règles : Syntaxe, Cohérence, Dépendance, Conflit</li>
+                      <li>Gestion structurée des résultats + persistance</li>
+                      <li>
+                        Import / mise à jour + publication des curriculums
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="journey-step-section">
+                    <p class="journey-step-section-title">
+                      <i class="bi bi-gear me-2"></i>Technologies
+                    </p>
+                    <div class="journey-tags">
+                      <span class="tag">Strategy</span>
+                      <span class="tag">Chain of Responsibility</span>
+                      <span class="tag">SLF4J</span>
+                      <span class="tag">Spring Data</span>
+                    </div>
+                  </div>
+
+                  <div class="journey-step-section">
+                    <p class="journey-step-section-title">
+                      <i class="bi bi-bar-chart-line me-2"></i>Compétences
+                      acquises
+                    </p>
+                    <ul class="journey-list">
+                      <li>Conception orientée patterns</li>
+                      <li>Logging et traçabilité</li>
+                      <li>Respect des specs fonctionnelles & techniques</li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Étape 03 (IN PROGRESS) -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <article class="journey-step journey-step--progress h-100">
+                  <div class="journey-step-top">
+                    <div class="journey-step-number">03</div>
+                    <div>
+                      <p class="journey-step-dates">Sept. 2026 – Avr. 2027</p>
+                      <h4 class="journey-step-title">Stage avancé</h4>
+                      <p class="journey-step-sub">
+                        Expertise et responsabilisation
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="journey-mini-progress"
+                    aria-label="Progression étape 3"
+                  >
+                    <div class="journey-mini-progress-bg">
+                      <div class="journey-progress-bar" data-width="40"></div>
+                    </div>
+                    <p class="journey-progress-note">
+                      Étape en cours (à finaliser)
+                    </p>
+                  </div>
+
+                  <div class="journey-step-section">
+                    <p class="journey-step-section-title">
+                      <i class="bi bi-bullseye me-2"></i>Objectifs
+                    </p>
+                    <p class="journey-step-section-text">
+                      Stabiliser le module, renforcer les tests et préparer la
+                      livraison (docs + déploiement).
+                    </p>
+                  </div>
+
+                  <div class="journey-step-section">
+                    <p class="journey-step-section-title">
+                      <i class="bi bi-check2-square me-2"></i>Missions
+                      principales
+                    </p>
+                    <ul class="journey-list">
+                      <li>Tests d’intégration + corrections</li>
+                      <li>
+                        Amélioration UX et cohérence des retours de validation
+                      </li>
+                      <li>Documentation et transfert de connaissances</li>
+                    </ul>
+                  </div>
+
+                  <div class="journey-step-section">
+                    <p class="journey-step-section-title">
+                      <i class="bi bi-gear me-2"></i>Technologies
+                    </p>
+                    <div class="journey-tags">
+                      <span class="tag">Java</span>
+                      <span class="tag">Spring Boot</span>
+                      <span class="tag">MongoDB</span>
+                      <span class="tag">Tests</span>
+                    </div>
+                  </div>
+
+                  <div class="journey-step-section">
+                    <p class="journey-step-section-title">
+                      <i class="bi bi-bar-chart-line me-2"></i>Compétences
+                      visées
+                    </p>
+                    <ul class="journey-list">
+                      <li>Qualité logicielle & stabilité</li>
+                      <li>Déploiement / livraison</li>
+                      <li>Communication technique</li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Bas de carte : Projet global + Résultat -->
+            <div class="row g-4 journey-bottom mt-4">
+              <div class="col-lg-7">
+                <div class="journey-bottom-card">
+                  <div class="journey-bottom-icon" aria-hidden="true">
+                    <i class="bi bi-file-earmark-text"></i>
+                  </div>
+                  <div>
+                    <p class="journey-bottom-title">Projet global</p>
+                    <p class="journey-bottom-text">
+                      Plateforme éducative <strong>EduSIO</strong> : gestion et
+                      validation des curriculums, orchestration des requêtes
+                      administratives, persistance et workflow.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-5">
+                <div class="journey-bottom-card journey-bottom-card--accent">
+                  <div class="journey-bottom-icon" aria-hidden="true">
+                    <i class="bi bi-lightbulb"></i>
+                  </div>
+                  <div>
+                    <p class="journey-bottom-title">Résultat global</p>
+                    <p class="journey-bottom-text">
+                      Une expérience complète et progressive qui m’a permis
+                      d’acquérir une vision d’ensemble du projet EduSIO, de la
+                      conception initiale jusqu’au déploiement, tout en
+                      renforçant mes compétences techniques et transversales.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.experience-featured -->
+
+        <div class="exp-timeline">
+          <div class="exp-item exp-item--right">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-card">
+              <div class="exp-header">
+                <span class="exp-date"
+                  ><i class="bi bi-calendar3 me-1"></i>Sept. 2023 – Oct.
+                  2024</span
+                >
+                <span class="exp-badge exp-badge--pro">Professionnel</span>
+              </div>
+              <h3 class="exp-title-text">Assistant Superviseur</h3>
+              <p class="exp-company">
+                <i class="bi bi-building me-1 text-accent"></i>BainDépot
+              </p>
+              <p class="exp-location">
+                <i class="bi bi-geo-alt me-1"></i>Blainville, Canada
+              </p>
+              <p class="exp-desc">
+                Intégration d'une nouvelle méthode de traitement des commandes,
+                formation des nouvelles recrues, coordination des flux et
+                encadrement d'équipe.
+              </p>
+              <div class="exp-tags mt-2">
+                <span class="tag">Management</span>
+                <span class="tag">Formation</span>
+                <span class="tag">Coordination</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-item exp-item--left">
+            <div class="exp-card">
+              <div class="exp-header">
+                <span class="exp-date"
+                  ><i class="bi bi-calendar3 me-1"></i>Avr. – Juin 2022</span
+                >
+                <span class="exp-badge exp-badge--stage">Stage</span>
+              </div>
+              <h3 class="exp-title-text">
+                Stagiaire – Contrôle Qualité Céramiques
+              </h3>
+              <p class="exp-company">
+                <i class="bi bi-building me-1 text-accent"></i>Usine SCS de
+                Béjaïa
+              </p>
+              <p class="exp-location">
+                <i class="bi bi-geo-alt me-1"></i>Béjaïa, Algérie
+              </p>
+              <p class="exp-desc">
+                Analyses physico-chimiques, suivi des paramètres technologiques
+                des carreaux céramiques et déduction des défauts de fabrication.
+              </p>
+              <div class="exp-tags mt-2">
+                <span class="tag">Contrôle Qualité</span>
+                <span class="tag">Analyse</span>
+                <span class="tag">Normes</span>
+              </div>
+            </div>
+            <div class="exp-dot" aria-hidden="true"></div>
+          </div>
+
+          <div class="exp-item exp-item--right">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-card">
+              <div class="exp-header">
+                <span class="exp-date"
+                  ><i class="bi bi-calendar3 me-1"></i>Sept. – Nov. 2019</span
+                >
+                <span class="exp-badge exp-badge--stage">Stage</span>
+              </div>
+              <h3 class="exp-title-text">
+                Stagiaire – Contrôleur Qualité Alimentaire
+              </h3>
+              <p class="exp-company">
+                <i class="bi bi-building me-1 text-accent"></i>Cevital SPA
+              </p>
+              <p class="exp-location">
+                <i class="bi bi-geo-alt me-1"></i>Béjaïa, Algérie
+              </p>
+              <p class="exp-desc">
+                Systèmes de management de la qualité, contrôle physico-chimique
+                des premières matières et politique d'achat fournisseurs.
+              </p>
+              <div class="exp-tags mt-2">
+                <span class="tag">Qualité</span>
+                <span class="tag">Audit</span>
+                <span class="tag">Normes ISO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ VEILLE ═══════════════ -->
+    <section
+      id="veille"
+      class="section-padding bg-white"
+      aria-labelledby="veille-title"
+    >
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <h2 class="section-label" id="veille-title">VEILLE TECHNOLOGIQUE</h2>
+          <p class="section-subtitle">
+            Je suis l'actualité tech pour rester à jour et alimenter ma
+            pratique.
+          </p>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <!-- Veille IA #1 -->
+          <div class="col-lg-10">
+            <article class="veille-card h-100">
+              <div class="veille-img-wrapper">
+                <img
+                  src="assets/images/veille-ia-llm.jpeg"
+                  alt="Illustration des modèles de langage (LLM)"
+                  class="veille-img"
+                  loading="lazy"
+                  width="400"
+                  height="150"
+                />
+              </div>
+
+              <div class="veille-body">
+                <span class="tag mb-2">IA / LLM</span>
+
+                <h3 class="veille-title">
+                  Modèles de langage (LLM) : usages, limites et bonnes pratiques
+                </h3>
+
+                <p class="veille-meta">
+                  <i class="bi bi-calendar3 me-1"></i>2026 ·
+                  <i class="bi bi-newspaper me-1 ms-1"></i>Documentation /
+                  articles techniques
+                </p>
+
+                <p class="veille-desc">
+                  Je surveille l’évolution des LLM (performances,
+                  hallucinations, contexte, coûts) et leurs impacts sur les
+                  applications web : aide à la rédaction, classification,
+                  chatbot, génération de code. Objectif : savoir quand l’IA
+                  apporte une valeur réelle et comment limiter les erreurs
+                  (prompts, validation, tests).
+                </p>
+
+                <div class="veille-rag-module">
+                  <div class="veille-rag-heading">
+                    <span class="tag">Module RAG</span>
+                    <h4>RAG : connecter un LLM à des documents fiables</h4>
+                  </div>
+                  <p>
+                    Le <strong>Retrieval-Augmented Generation</strong> enrichit
+                    les réponses d’un LLM avec des contenus sélectionnés dans
+                    une base documentaire. Je m’intéresse à l’indexation, aux
+                    embeddings, au découpage des documents et à la citation des
+                    sources afin de réduire les hallucinations dans des
+                    assistants basés sur des FAQ, cours ou procédures.
+                  </p>
+                  <div class="veille-sources" aria-label="Sources de la veille">
+                    <a
+                      href="https://platform.openai.com/docs"
+                      target="_blank"
+                      rel="noopener"
+                      class="btn-outline-custom btn-sm-custom"
+                    >
+                      Documentation OpenAI
+                      <i class="bi bi-box-arrow-up-right ms-1"></i>
+                    </a>
+                    <a
+                      href="https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
+                      target="_blank"
+                      rel="noopener"
+                      class="btn-outline-custom btn-sm-custom"
+                    >
+                      Guide Microsoft RAG
+                      <i class="bi bi-box-arrow-up-right ms-1"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ CV ═══════════════ -->
+    <section
+      id="cv"
+      class="section-padding bg-surface"
+      aria-labelledby="cv-title"
+    >
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <h2 class="section-label" id="cv-title">Mon CV</h2>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center gap-4">
+          <a
+            href="assets/documents/cv.pdf"
+            download
+            class="btn-accent-custom btn-lg-custom"
+          >
+            <i class="bi bi-download me-2"></i>Télécharger le CV (PDF)
+          </a>
+          <a
+            href="assets/documents/cv.pdf"
+            target="_blank"
+            rel="noopener"
+            class="btn-accent-custom btn-lg-custom"
+          >
+            <i class="bi bi-eye me-2"></i>Voir en plein écran
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ CONTACT ═══════════════ -->
+    <section
+      id="contact"
+      class="section-padding bg-surface"
+      aria-labelledby="contact-title"
+    >
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <h2 class="section-label" id="contact-title">CONTACT</h2>
+          <p class="section-subtitle">
+            Si vous avez une question, une demande, un projet ou juste une envie
+            d'en savoir un peu plus sur moi, n'hésitez surtout pas.
+          </p>
+        </div>
+
+        <div class="row g-5 align-items-start">
+          <!-- Infos -->
+          <div class="col-lg-5">
+            <div class="contact-info-card mb-4">
+              <a
+                href="mailto:aitamranetoufik97@gmail.com"
+                class="contact-info-item"
+              >
+                <span class="contact-icon"
+                  ><i class="bi bi-envelope-fill"></i
+                ></span>
+                <div>
+                  <span class="contact-label">Email</span>
+                  <span class="contact-value">aitamranetoufik97@gmail.com</span>
+                </div>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/toufik-ait-amrane-36b761384/"
+                target="_blank"
+                rel="noopener"
+                class="contact-info-item"
+              >
+                <span class="contact-icon"><i class="bi bi-linkedin"></i></span>
+                <div>
+                  <span class="contact-label">LinkedIn</span>
+                  <span class="contact-value">toufik-ait-amrane</span>
+                </div>
+              </a>
+              <a
+                href="https://github.com/toufik12197"
+                target="_blank"
+                rel="noopener"
+                class="contact-info-item"
+              >
+                <span class="contact-icon"><i class="bi bi-github"></i></span>
+                <div>
+                  <span class="contact-label">GitHub</span>
+                  <span class="contact-value">toufik12197</span>
+                </div>
+              </a>
+              <div class="contact-info-item">
+                <span class="contact-icon"
+                  ><i class="bi bi-geo-alt-fill"></i
+                ></span>
+                <div>
+                  <span class="contact-label">Localisation</span>
+                  <span class="contact-value">Savigny-sur-Orge, France</span>
+                </div>
+              </div>
+            </div>
+            <div class="availability-badge">
+              <i
+                class="bi bi-circle-fill pulse-dot me-2"
+                aria-hidden="true"
+              ></i>
+              Disponible immédiatement pour une alternance
+            </div>
+          </div>
+
+          <!-- Formulaire -->
+          <div class="col-lg-7">
+            <form
+              id="contactForm"
+              class="contact-form"
+              novalidate
+              aria-label="Formulaire de contact"
+            >
+              <div class="mb-4">
+                <label for="contactName" class="form-label-custom">
+                  Nom complet <span class="text-accent">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="contactName"
+                  name="from_name"
+                  class="form-control-custom"
+                  required
+                  placeholder="Votre nom et prénom"
+                  autocomplete="name"
+                />
+                <div class="invalid-feedback-custom" role="alert">
+                  <i class="bi bi-exclamation-circle me-1"></i>
+                  Veuillez saisir votre nom.
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label for="contactEmail" class="form-label-custom">
+                  Adresse email <span class="text-accent">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="contactEmail"
+                  name="reply_to"
+                  class="form-control-custom"
+                  required
+                  placeholder="votre@email.com"
+                  autocomplete="email"
+                />
+                <div class="invalid-feedback-custom" role="alert">
+                  <i class="bi bi-exclamation-circle me-1"></i>
+                  Veuillez saisir une adresse email valide.
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label for="contactSubject" class="form-label-custom"
+                  >Objet <span class="text-accent">*</span></label
+                >
+                <input
+                  type="text"
+                  id="contactSubject"
+                  name="subject"
+                  class="form-control-custom"
+                  required
+                  placeholder="Objet de votre message"
+                  autocomplete="off"
+                />
+                <div class="invalid-feedback-custom" role="alert">
+                  <i class="bi bi-exclamation-circle me-1"></i>
+                  Veuillez saisir un objet.
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label for="contactMessage" class="form-label-custom">
+                  Message <span class="text-accent">*</span>
+                </label>
+                <textarea
+                  id="contactMessage"
+                  name="message"
+                  class="form-control-custom"
+                  rows="5"
+                  required
+                  placeholder="Décrivez votre projet, votre besoin..."
+                ></textarea>
+                <div class="invalid-feedback-custom" role="alert">
+                  <i class="bi bi-exclamation-circle me-1"></i>
+                  Veuillez saisir un message.
+                </div>
+              </div>
+
+              <!-- ═══════════════ GOOGLE reCAPTCHA ═══════════════ -->
+              <div class="captcha-box mb-4">
+                <div class="captcha-header">
+                  <div class="captcha-heading">
+                    <span class="captcha-icon" aria-hidden="true">
+                      <i class="bi bi-shield-lock"></i>
+                    </span>
+                    <div>
+                      <span class="captcha-label">Vérification anti-spam</span>
+                      <p id="captchaDescription" class="captcha-description">
+                        Confirmez que vous n'êtes pas un robot.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="recaptcha-shell">
+                  <div id="recaptchaContainer"></div>
+                </div>
+
+                <p
+                  id="captchaStatus"
+                  class="captcha-description captcha-status"
+                  role="status"
+                  aria-live="polite"
+                >
+                  Chargement de la vérification…
+                </p>
+                <div
+                  id="captchaError"
+                  class="captcha-feedback captcha-feedback--error d-none"
+                  role="alert"
+                >
+                  <i class="bi bi-exclamation-circle me-1"></i>
+                  Veuillez confirmer la case reCAPTCHA avant d'envoyer le formulaire.
+                </div>
+              </div>
+
+              <!-- Honeypot invisible pour les robots -->
+              <div class="website-field" aria-hidden="true">
+                <label for="website">Site web</label>
+                <input
+                  type="text"
+                  id="website"
+                  name="website"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </div>
+
+              <button
+                type="submit"
+                class="btn-primary-custom w-100 justify-content-center"
+              >
+                <span class="btn-text">
+                  <i class="bi bi-send-fill me-2"></i>Envoyer le message
+                </span>
+              </button>
+
+              <div
+                id="formSuccess"
+                class="form-feedback form-feedback--success d-none mt-3"
+                role="alert"
+              >
+                <i class="bi bi-check-circle-fill me-2"></i>
+                Votre client mail s'est ouvert avec le message pré-rempli.
+                Cliquez sur "Envoyer" dans votre messagerie pour finaliser
+                l'envoi.
+              </div>
+              <div
+                id="formError"
+                class="form-feedback form-feedback--error d-none mt-3"
+                role="alert"
+              >
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                Veuillez remplir tous les champs obligatoires.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-top row align-items-center py-4">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <a href="#hero" class="footer-brand">
+              <span class="brand-dot">◈</span> Toufik Ait Amrane
+            </a>
+          </div>
+          <div
+            class="col-md-6 d-flex justify-content-md-end justify-content-start gap-3"
+          >
+            <a
+              href="https://github.com/toufik12197"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+              class="footer-social"
+            >
+              <i class="bi bi-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/toufik-ait-amrane-36b761384/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              class="footer-social"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a
+              href="mailto:aitamranetoufik97@gmail.com"
+              aria-label="Email"
+              class="footer-social"
+            >
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
+          <p class="mb-0">© 2026 Toufik Ait Amrane — Portfolio BTS SIO SLAM</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Configuration publique du formulaire -->
+    <script src="js/config.js"></script>
+    <!-- JS personnalisé -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
