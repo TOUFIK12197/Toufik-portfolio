@@ -60,7 +60,7 @@ Puis ouvrir [http://localhost:8000](http://localhost:8000) dans le navigateur. A
 La clé publique du widget peut être visible dans le navigateur. Le secret Google doit rester exclusivement dans Cloudflare : ne le placez jamais dans `js/config.js` ni dans un autre fichier publié par GitHub Pages.
 
 1. Dans la [console d'administration reCAPTCHA](https://www.google.com/recaptcha/admin/create), créez une clé **reCAPTCHA v2 – Case à cocher « Je ne suis pas un robot »**. Ajoutez le nom d'hôte de votre site (par exemple `votre-utilisateur.github.io`) et récupérez la clé du site et la clé secrète.
-2. Dans `cloudflare-worker/wrangler.jsonc`, remplacez `YOUR-USERNAME.github.io` par l'origine exacte de votre site, sans chemin ni barre oblique finale (par exemple `https://votre-utilisateur.github.io`).
+2. L'origine `https://toufik12197.github.io` est déjà renseignée dans `cloudflare-worker/wrangler.jsonc`. Si vous utilisez un domaine personnalisé ou un autre compte GitHub, remplacez-la par l'origine exacte du site, sans chemin ni barre oblique finale.
 3. Depuis PowerShell, à la racine du projet, publiez le Worker et enregistrez son secret :
 
    ```powershell
